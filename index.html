@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Sleep</title>
+</head>
+
+<body>
+    <div id="on">
+        <button onclick="toggle()" id="btnn">Show info <i class="fa fa-toggle-on fa-3x" aria-hidden="true"></i></button>
+    </div>
+    <div id="off">
+        <button onclick="toggle()" id="btnn">Hide info <i class="fa fa-toggle-off fa-3x" aria-hidden="true"></i></button>
+    </div>
+    <div id="left" class="left">
+        <h2>Finding it hard to fall asleep?</h2>
+        <span>We hope to help with that, in three simple steps:</span>
+        <ul>
+            <li>Plug in your earphones</li>
+            <li>Press play to listen to some calming music</li>
+            <li>Close your eyes and drift off</li>
+        </ul>
+    </div>
+    <div class="player">
+        <!-- Define the section for displaying details -->
+        <div class="details">
+            <div class="track-art"></div>
+            <div class="track-name">Track Name</div>
+        </div>
+
+        <!-- Define the section for displaying track buttons -->
+        <div class="buttons">
+            <div class="prev-track" onclick="prevTrack()">
+                <i class="fa fa-step-backward fa-2x"></i>
+            </div>
+            <div class="playpause-track" onclick="playpauseTrack()">
+                <i class="fa fa-play-circle fa-5x"></i>
+            </div>
+            <div class="next-track" onclick="nextTrack()">
+                <i class="fa fa-step-forward fa-2x"></i>
+            </div>
+        </div>
+
+        <!-- Define the section for displaying the seek slider-->
+        <div class="slider_container">
+            <div class="current-time">00:00</div>
+            <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+            <div class="total-duration">00:00</div>
+        </div>
+
+        <!-- Define the section for displaying the volume slider-->
+        <div class="slider_container">
+            <i class="fa fa-volume-down"></i>
+            <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+            <i class="fa fa-volume-up"></i>
+        </div>
+    </div>
+    <div id="right" class="right">
+        <h2>What is Insomnia</h2>
+        <p>According to <a href="https://www.mayoclinic.org/diseases-conditions/insomnia/symptoms-causes/syc-20355167"
+                target="_blank">
+                Mayo Clinic </a>, Insomnia is a common sleep disorder that can make it hard to fall asleep, hard to stay
+            asleep, or cause you to wake up too early and not be able to get back to sleep.</p>
+        <h3>Causes</h3>
+        <ul>
+            <li>Stress</li>
+            <li>Travel or work schedule</li>
+            <li>Poor sleep habits</li>
+            <li>Eating too much late in the evening</li>
+        </ul>
+        <h3>Here are some things that might help with Insomnia</h3>
+        <ul>
+            <li>Going to bed and wake up at the same time every day</li>
+            <li>Relax 1 hour before bed e.g taking a bath</li>
+            <li>Make sure your bedroom is dark and quiet </li>
+        </ul>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
